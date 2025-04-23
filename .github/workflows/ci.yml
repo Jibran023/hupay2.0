@@ -1,49 +1,52 @@
-name: CI Pipeline
+name: CI/CD Pipeline for Expo with EAS Build
 
-# on:
-#   push:
-#     branches:
-#       - main
-#       - develop
-#       - feature/*
-#   pull_request:
-#     branches:
-#       - develop
+on:
+  # push:
+  #   branches:
+  #     - main  
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout Code
+      # Step 1: Checkout the repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js environment
+      # Step 2: Set up Node.js (Set up the required Node.js version)
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22.4.0'  # You can change the Node version to match your project
+          node-version: '14'  # Change this to the version you need
 
       # Step 3: Install dependencies
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      # Step 4: Run linter (if you have ESLint set up)
-      - name: Run Linter
-        run: npx eslint . --fix  # Runs ESLint on the entire project and fixes issues if possible
+      # Step 4: Install EAS CLI
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
 
-      # Step 5: Build the application (if you have a build step)
-      - name: Build the Application
-        run: npm run build  # Replace with your build command (e.g., webpack, react-scripts build, etc.)
+      # Step 5: Log in to Expo (You will need to set up Expo authentication using GitHub Secrets)
+      - name: Expo login
+        run: eas login --token ${{ secrets.EXPO_ACCESS_TOKEN }}  # Use the Expo token from GitHub secrets
 
-      # Step 6: Check for unused dependencies (optional)
-      - name: Check for Unused Dependencies (Optional)
-        run: npx depcheck  # You can install depcheck to look for unused dependencies
+      # Step 6: Run EAS Build (for Android and iOS)
+      - name: EAS Build (Android)
+        run: eas build --platform android --profile production --non-interactive
 
-      # Step 7: Upload build artifacts (Optional for deploying later)
-      - name: Upload Build Artifacts
+      - name: EAS Build (iOS)
+        run: eas build --platform ios --profile production --non-interactive
+
+      # Step 7: Optionally, upload the build artifacts to GitHub for future use (e.g., deploy or store)
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: build-artifacts
-          path: build/  # Specify your build output directory (e.g., `build` or `dist`)
+          name: expo-build-artifacts
+          path: ./apk/*.apk   # path to where our build artifacts are stored, like APK 
+
+      # # Step 8: Optionally, notify if the build fails or succeeds (Slack, email, etc.)
+      # - name: Notify Build Success (Optional)
+      #   run: echo "Build was successful!"  # Here, you can integrate notifications like Slack if needed
