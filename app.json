@@ -3,15 +3,18 @@
     "name": "hupay",
     "slug": "hupay",
     "version": "1.0.0",
+    "sdkVersion": "46.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mycompany.myapp"
     },
     "android": {
+      "package": "com.mycompany.myapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
