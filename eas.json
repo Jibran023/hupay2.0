@@ -5,7 +5,7 @@
           "buildType": "apk"
         },
         "ios": {
-          "distribution": "app-store"
+          "distribution": "store"
         }
       }
     }
