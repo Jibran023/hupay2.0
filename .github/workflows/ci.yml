@@ -46,7 +46,7 @@ jobs:
           eas-version: latest
 
       - name: EAS init
-        run: eas init --non-interactive
+        run: eas init --non-interactive --force
 
       # Step 6: Run EAS Build (for Android and iOS)
       - name: EAS Build (Android)
