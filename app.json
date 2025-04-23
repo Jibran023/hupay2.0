@@ -11,10 +11,10 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mycompany.myapp"
+      "bundleIdentifier": "com.hupay.myapp"
     },
     "android": {
-      "package": "com.mycompany.myapp",
+      "package": "com.hupay.myapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
