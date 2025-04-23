@@ -40,12 +40,12 @@ jobs:
       - name: EAS Build (iOS)
         run: eas build --platform ios --profile production --non-interactive
 
-      # Step 7: Optionally, upload the build artifacts to GitHub for future use (e.g., deploy or store)
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: expo-build-artifacts
-          path: ./apk/*.apk   # path to where our build artifacts are stored, like APK 
+      # # Step 7: Optionally, upload the build artifacts to GitHub for future use (e.g., deploy or store)
+      # - name: Upload build artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: expo-build-artifacts
+      #     path: ./apk/*.apk   # path to where our build artifacts are stored, like APK 
 
       # # Step 8: Optionally, notify if the build fails or succeeds (Slack, email, etc.)
       # - name: Notify Build Success (Optional)
