@@ -1,0 +1,49 @@
+name: CI Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - main
+#       - develop
+#       - feature/*
+#   pull_request:
+#     branches:
+#       - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.4.0'  # You can change the Node version to match your project
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 4: Run linter (if you have ESLint set up)
+      - name: Run Linter
+        run: npx eslint . --fix  # Runs ESLint on the entire project and fixes issues if possible
+
+      # Step 5: Build the application (if you have a build step)
+      - name: Build the Application
+        run: npm run build  # Replace with your build command (e.g., webpack, react-scripts build, etc.)
+
+      # Step 6: Check for unused dependencies (optional)
+      - name: Check for Unused Dependencies (Optional)
+        run: npx depcheck  # You can install depcheck to look for unused dependencies
+
+      # Step 7: Upload build artifacts (Optional for deploying later)
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: build/  # Specify your build output directory (e.g., `build` or `dist`)
