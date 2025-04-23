@@ -45,6 +45,9 @@ jobs:
           expo-version: latest
           eas-version: latest
 
+      - name: EAS init
+        run: eas init
+
       # Step 6: Run EAS Build (for Android and iOS)
       - name: EAS Build (Android)
         run: eas build --platform android --profile production --non-interactive
