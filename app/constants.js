@@ -1,0 +1,1 @@
+export const API_URL = 'https://hu-pay-backend-94602dbd4194.herokuapp.com'; 

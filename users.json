@@ -1,0 +1,286 @@
+[
+  {
+    "huid": "xx12345",
+    "password": "password123",
+    "full_name": "Afzal Khan",
+    "account_number": "0000123456",
+    "balance": 6899,
+    "bank": "Bank A",
+    "card_number": "4532 7819 4321 8765",
+    "expiry_date": "04/28",
+    "beneficiaries": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "bank": "Bank A",
+        "accountNumber": "1234567890"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "bank": "Bank B",
+        "accountNumber": "9876543210"
+      },
+      {
+        "id": 3,
+        "name": "Haider",
+        "accountNumber": "122654698700",
+        "bank": "Bank F"
+      },
+      {
+        "id": 4,
+        "name": "Zaki Hussain",
+        "accountNumber": "0000678901",
+        "bank": "Bank B"
+      }
+    ],
+    "transactions": [
+      {
+        "timestamp": "2025-04-17T22:14:10.987Z",
+        "amount": 13,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T22:14:46.661Z",
+        "amount": 1200,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T22:15:53.341Z",
+        "amount": 1200,
+        "sender": "Zaki Hussain",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:23:49.812Z",
+        "amount": 123,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:25:39.273Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:26:42.393Z",
+        "amount": 22,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:19.279Z",
+        "amount": 2000,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:43.732Z",
+        "amount": 10,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:51.043Z",
+        "amount": 2,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:35:57.838Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:46:09.575Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:50:21.541Z",
+        "amount": 2,
+        "sender": "Zaki Hussain",
+        "receiver": "Afzal Khan",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-18T20:07:29.974Z",
+        "amount": 200,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "sent"
+      }
+    ]
+  },
+  {
+    "huid": "xx67890",
+    "password": "mypassword",
+    "full_name": "Zaki Hussain",
+    "account_number": "0000678901",
+    "balance": 7236,
+    "bank": "Bank B",
+    "card_number": "5214 9876 5432 1098",
+    "expiry_date": "09/27",
+    "beneficiaries": [
+      {
+        "id": 3,
+        "name": "Alice Johnson",
+        "bank": "Bank B",
+        "accountNumber": "4567891234"
+      },
+      {
+        "id": 4,
+        "name": "Afzal Khan",
+        "accountNumber": "0000123456",
+        "bank": "Bank A"
+      }
+    ],
+    "transactions": [
+      {
+        "timestamp": "2025-04-17T22:14:10.987Z",
+        "amount": 13,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T22:14:46.661Z",
+        "amount": 1200,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T22:15:53.341Z",
+        "amount": 1200,
+        "sender": "Zaki Hussain",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:25:39.273Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:26:42.393Z",
+        "amount": 22,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:35:57.838Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:46:09.575Z",
+        "amount": 1,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      },
+      {
+        "timestamp": "2025-04-17T23:50:21.541Z",
+        "amount": 2,
+        "sender": "Zaki Hussain",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-18T20:07:29.974Z",
+        "amount": 200,
+        "sender": "Afzal Khan",
+        "receiver": "Zaki Hussain",
+        "type": "received"
+      }
+    ]
+  },
+  {
+    "huid": "xx54321",
+    "password": "qwer",
+    "full_name": "Muhammad Wajeeh",
+    "account_number": "0000654321",
+    "balance": 22165,
+    "bank": "Bank C",
+    "card_number": "6011 2345 6789 0123",
+    "expiry_date": "12/29",
+    "beneficiaries": [
+      {
+        "id": 3,
+        "name": "Alice Johnson",
+        "bank": "Bank B",
+        "accountNumber": "4567891234"
+      },
+      {
+        "id": 4,
+        "name": "Heather",
+        "accountNumber": "280",
+        "bank": "Bank B"
+      },
+      {
+        "id": 5,
+        "name": "Design",
+        "accountNumber": "28",
+        "bank": "Bank B"
+      },
+      {
+        "id": 6,
+        "name": "Afzal khan",
+        "accountNumber": "0000123456",
+        "bank": "Bank A"
+      }
+    ],
+    "transactions": [
+      {
+        "timestamp": "2025-04-17T23:23:49.812Z",
+        "amount": 123,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:19.279Z",
+        "amount": 2000,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:43.732Z",
+        "amount": 10,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      },
+      {
+        "timestamp": "2025-04-17T23:27:51.043Z",
+        "amount": 2,
+        "sender": "Muhammad Wajeeh",
+        "receiver": "Afzal Khan",
+        "type": "sent"
+      }
+    ]
+  }
+]
