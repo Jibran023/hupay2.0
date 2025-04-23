@@ -48,12 +48,19 @@ jobs:
       - name: EAS init
         run: eas init --non-interactive --force
 
-      # Step 6: Run EAS Build (for Android and iOS)
-      - name: EAS Build (Android)
-        run: eas build --platform android --profile production 
+      - name: Run custom tasks (e.g., lint, tests)
+        run: |
+          # Example: You can add other tasks here like running tests or linting
+          # npm run lint
+          # npm run test
+          echo "Custom tasks would run here"
 
-      - name: EAS Build (iOS)
-        run: eas build --platform ios --profile production --non-interactive
+      # # Step 6: Run EAS Build (for Android and iOS)
+      # - name: EAS Build (Android)
+      #   run: eas build --platform android --profile production 
+
+      # - name: EAS Build (iOS)
+      #   run: eas build --platform ios --profile production --non-interactive
 
       # # Step 7: Optionally, upload the build artifacts to GitHub for future use (e.g., deploy or store)
       # - name: Upload build artifacts
