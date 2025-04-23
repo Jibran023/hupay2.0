@@ -46,7 +46,7 @@ jobs:
           eas-version: latest
 
       - name: EAS init
-        run: eas init
+        run: eas init --non-interactive --team jibran23 --project a28a51a2-78f7-44db-b976-682242b0aa14
 
       # Step 6: Run EAS Build (for Android and iOS)
       - name: EAS Build (Android)
