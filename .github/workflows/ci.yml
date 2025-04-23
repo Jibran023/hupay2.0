@@ -35,9 +35,15 @@ jobs:
       - name: Check Expo token (Debugging)
         run: echo ${{ secrets.EXPO_ACCESS_TOKEN }}
 
-      # Step 5: Log in to Expo (You will need to set up Expo authentication using GitHub Secrets)
-      - name: EAS login
-        run: eas login --token ${{ secrets.EXPO_ACCESS_TOKEN }}  # Use the Expo token from GitHub secrets
+      # # Step 5: Log in to Expo (You will need to set up Expo authentication using GitHub Secrets)
+      # - name: EAS login
+      #   run: eas login --token ${{ secrets.EXPO_ACCESS_TOKEN }}  # Use the Expo token from GitHub secrets
+      - name: 🏗 Setup Expo and EAS
+        uses: expo/expo-github-action@v7
+        with:
+          token: ${{ secrets.EXPO_ACCESS_TOKEN }}  # Use the Expo token from GitHub secrets
+          expo-version: latest
+          eas-version: latest
 
       # Step 6: Run EAS Build (for Android and iOS)
       - name: EAS Build (Android)
