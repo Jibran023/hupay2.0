@@ -2,7 +2,7 @@
 
 
 import React, { useState, useRef, useEffect } from 'react';
-import { API_URL } from '../constants';
+import { API_URL } from '../../constants';
 import {
   View,
   Text,
@@ -100,6 +100,11 @@ function Login() {
   };
 
   const handleFingerprintLogin = async () => {
+    if (!huid) {
+      Alert.alert('HUID required', 'Enter your HUID above, then use fingerprint to log in.');
+      return;
+    }
+
     try {
       const compatible = await LocalAuthentication.hasHardwareAsync();
       if (!compatible) {
@@ -119,10 +124,17 @@ function Login() {
       });
 
       if (result.success) {
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Dashboard' }],
-        });
+        const response = await fetch(API_URL + `/user/${huid}`);
+        const data = await response.json();
+
+        if (response.ok) {
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Dashboard', params: { user: data.user } }],
+          });
+        } else {
+          Alert.alert('Login Failed', data.message || 'User not found');
+        }
       } else {
         Alert.alert('Authentication Failed', 'Try again.');
       }

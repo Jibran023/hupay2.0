@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../constants';
+import { API_URL } from '../../constants';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Modal, FlatList, Animated, Easing, Alert, Vibration } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons, Feather } from '@expo/vector-icons';

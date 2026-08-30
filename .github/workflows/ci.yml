@@ -32,9 +32,6 @@ jobs:
       - name: Install Expo CLI
         run: npm install -g expo-cli
 
-      - name: Check Expo token (Debugging)
-        run: echo ${{ secrets.EXPO_ACCESS_TOKEN }}
-
       # # Step 5: Log in to Expo (You will need to set up Expo authentication using GitHub Secrets)
       # - name: EAS login
       #   run: eas login --token ${{ secrets.EXPO_ACCESS_TOKEN }}  # Use the Expo token from GitHub secrets
